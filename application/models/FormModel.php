@@ -19,7 +19,12 @@ class FormModel extends CI_Model {
 		$this->db->where('id_fir', $id);
 		$query = $this->db->update('form', $data);
 		return $query;
-		
+
+	}
+
+	public function delete($id) {
+		$query = $this->db->delete('form', array('id_fir' => $id));
+		return $query;
 	}
 }
 

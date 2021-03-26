@@ -17,6 +17,11 @@
     <center><img src="https://www.eurokarsgroup.com/wp-content/uploads/2019/11/Eurokars-Services-logo.jpg"></center>
     <h1 class="text-center">Form Internship Recruitment</h1>
     <div class="container">
+		<?php
+			if ($this->session->set_flashdata('success')) {
+		?>
+		<div class="alert alert-success"><?=$this->session->flashdata('success');?></div>
+		<?php } ?>
 		<form method="post" action="<?=base_url('form/insert');?>">
         <div class="row">
             <div class="col-xs-6">

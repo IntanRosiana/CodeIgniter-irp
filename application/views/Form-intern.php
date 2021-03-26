@@ -58,10 +58,10 @@
       <td><?=$data->total_insentif;?></td>
       <td>
 				<a href="<?=base_url('form/update?id='.$data->id_fir);?>" class="btn btn-success">Edit</a> | &nbsp;
-				<a href="" class="btn btn-danger">Delete</a>
+				<a href="<?=base_url('form/delete?id='.$data->id_fir);?>" class="btn btn-danger">Delete</a>
 			</td>
 		</tr>
-	<?php ?>
+	<?php } ?>
   </tbody>
 </table>
 </div>

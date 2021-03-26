@@ -103,8 +103,21 @@ class Form extends CI_Controller {
 
 		if($update) {
 			echo "Data Berhasil di Update!";
+			redirect(base_url('home'));
 		} else {
 			echo "Data Gagal di Update !";
+		}
+	}
+
+	public function delete () {
+		$id = $this->input->get('id');
+		$delete = $this->FormModel->delete($id);
+
+		if($delete) {
+			$this->session->set_flashdata('success', 'Data Berhasil di Hapus !');
+			redirect(base_url('home'));
+		} else {
+			echo "Data tidak bisa di Hapus!";
 		}
 	}
 }
