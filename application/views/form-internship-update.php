@@ -23,11 +23,11 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <label class="col-xs-12">ID FIR : </label>
-                    	<input class="form-control" name="id_fir" type="text" name="id_fir"/>
+                        <input class="form-control" name="id_fir" type="text" name="id_fir" value="<?=$dataForm->id_fir ?>"/>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <label class="col-xs-12">Date : </label>
-                        <input class="form-control" name="date" type="date" />
+                        <input class="form-control" name="date" type="date" value="<?=$dataForm->date ?>"/>
                     </div>
                 </div>
             </div>
@@ -38,32 +38,32 @@
                     <div class="col-xs-12 col-sm-6">
                         <label class="col-xs-12">Position/Title : </label>
                         <select class="form-select" name="position_title" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">Staff</option>
-                            <option value="2">Supervisior</option>
-                            <option value="3">Assistant Manager</option>
-                            <option value="4">Manager</option>
+                            <option>Open this select menu</option>
+                            <option value="1" <?php if($dataForm->position_title == '1') { echo 'selected'; } ?>>Staff</option>
+                            <option value="2" <?php if($dataForm->position_title == '2') { echo 'selected'; } ?>>Supervisior</option>
+                            <option value="3" <?php if($dataForm->position_title == '3') { echo 'selected'; } ?>>Assistant Manager</option>
+                            <option value="4" <?php if($dataForm->position_title == '4') { echo 'selected'; } ?>>Manager</option>
                         </select>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <label class="col-xs-12">Company : </label>
-                        <input class="form-control" name="company" type="text" placeholder="Placeholder" />
+                        <input class="form-control" name="company" type="text" placeholder="Placeholder" value="<?=$dataForm->company ?>" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <label class="col-xs-12">Report to : </label>
-                        <input class="form-control" name="report_to" type="text" placeholder="Placeholder" />
+                        <input class="form-control" name="report_to" type="text" placeholder="Placeholder" value="<?=$dataForm->report_to ?>"/>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <label class="col-xs-12">Departement : </label>
-                        <input class="form-control" name="departement" type="text" placeholder="Placeholder" />
+                        <input class="form-control" name="departement" type="text" placeholder="Placeholder" value="<?=$dataForm->departement ?>" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <label class="col-xs-12">Brand : </label>
-                        <input class="form-control" name="brand" type="text" placeholder="Placeholder" />
+                        <input class="form-control" name="brand" type="text" placeholder="Placeholder"  value="<?=$dataForm->brand?>" />
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <label class="col-xs-12">Location : </label>
@@ -80,23 +80,23 @@
 
                         <ul class="list-group">
                             <li class="list-group-item">
-                                <input class="form-check-input me-1" type="radio" value="associate_degree" name="degree"
-                                    aria-label="...">
+                                <input class="form-check-input me-1" type="radio" value="associate_degree" name="degree" 
+								aria-label="..." <?php if($dataForm->education_background == 'associate_degree') { echo 'checked'; } ?>>
                                 Associate Degree
                             </li>
                             <li class="list-group-item">
-                                <input class="form-check-input me-1" type="radio" value="bachelor-degree" name="degree"
-                                    aria-label="...">
+                                <input class="form-check-input me-1" type="radio" value="bachelor_degree" name="degree"
+                                    aria-label="..." <?php if($dataForm->education_background == 'bachelor_degree') { echo 'checked'; } ?>>
                                 Bachelor Degree
                             </li>
                             <li class="list-group-item">
                                 <input class="form-check-input me-1" type="radio" value="master_degree" name="degree"
-                                    aria-label="...">
+                                    aria-label="..." <?php if($dataForm->education_background == 'master_degree') { echo 'checked'; } ?>>
                                 Master Degree
                             </li>
                             <li class="list-group-item">
                                 <input class="form-check-input me-1" type="radio" value="other" name="degree"
-                                    aria-label="...">
+                                    aria-label="..." <?php if($dataForm->education_background == 'other') { echo 'checked'; } ?>>
                                 Other
                             </li>
                         </ul>
@@ -106,42 +106,42 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12">
                                 <label class="col-xs-12">Day Efectif/Month : </label>
-                                <input class="form-control" name="dayefectif_month" type="number" placeholder="20" />
+                                <input class="form-control" name="dayefectif_month" type="number" placeholder="20"  value="<?=$dataForm->dayefectif_month ?>"/>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12">
                                 <label class="col-xs-12">Day Used : </label>
-                                <input class="form-control" name="day_used" type="number" placeholder="20" />
+                                <input class="form-control" name="day_used" type="number" placeholder="20"  value="<?=$dataForm->day_used ?>" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12">
                                 <label class="col-xs-12">UMR Default : </label>
-                                <input class="form-control" name="umr_default" type="number" placeholder="4.207.750" />
+                                <input class="form-control" name="umr_default" type="number" placeholder="4.207.750"  value="<?=$dataForm->umr_default ?>" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12">
                                 <label class="col-xs-12">Presentation : </label>
-                                <input class="form-control" name="presentation" type="number" placeholder="S1=75%. D3=65%" />
+                                <input class="form-control" name="presentation" type="number" placeholder="S1=75%. D3=65%"  value="<?=$dataForm->presentation ?>" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12">
                                 <label class="col-xs-12">Result Insentif : </label>
-                                <input class="form-control" name="result_insentif" type="text" placeholder="S1 = UMR 75% D3 = UMR 65%" />
+                                <input class="form-control" name="result_insentif" type="text" placeholder="S1 = UMR 75% D3 = UMR 65%"  value="<?=$dataForm->result_insentif ?>" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12">
                                 <label class="col-xs-12">Total Insentif : </label>
-                                <input class="form-control" name="total_insentif" type="text" placeholder="(day efektif * day used)" />
+                                <input class="form-control" name="total_insentif" type="text" placeholder="(day efektif * day used)"  value="<?=$dataForm->total_insentif ?>" />
                             </div>
                         </div>
 						<div class="row">
                             <div class="col-xs-12 col-sm-12">
-                                <button type="submit" class="btn btn-success">Insert</button>
+                                <button type="submit" class="btn btn-success">Update</button>
                             </div>
                         </div>
                     </div>

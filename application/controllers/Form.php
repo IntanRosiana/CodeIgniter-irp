@@ -54,4 +54,13 @@ class Form extends CI_Controller {
 			echo 'Data gagal di input';
 		}
 	}
+	public function update () {
+		$id = $this->input->get('id');
+		$dataForm = $this->FormModel->getById($id);
+		$data = array(
+			'dataForm' => $dataForm[0],
+			'test' => 'test'
+		);
+		$this->load->view('form-internship-update', $data);
+	}
 }
