@@ -17,13 +17,13 @@
     <center><img src="https://www.eurokarsgroup.com/wp-content/uploads/2019/11/Eurokars-Services-logo.jpg"></center>
     <h1 class="text-center">Form Internship Recruitment</h1>
     <div class="container">
-		<form method="post" action="<?=base_url('form/insert');?>">
+		<form method="post" action="<?=base_url('form/updateProcess');?>">
         <div class="row">
             <div class="col-xs-6">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <label class="col-xs-12">ID FIR : </label>
-                        <input class="form-control" name="id_fir" type="text" name="id_fir" value="<?=$dataForm->id_fir ?>"/>
+                        <input class="form-control" name="id_fir" type="text" name="id_fir" value="<?=$dataForm->id_fir ?>" readonly/>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <label class="col-xs-12">Date : </label>
@@ -59,6 +59,7 @@
                         <label class="col-xs-12">Departement : </label>
                         <input class="form-control" name="departement" type="text" placeholder="Placeholder" value="<?=$dataForm->departement ?>" />
                     </div>
+				</div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">

@@ -14,5 +14,12 @@ class FormModel extends CI_Model {
 		$query = $this->db->get_where('form', array('id_fir' => $id));
 		return $query->result();
 	}
+
+	public function update($id, $data) {
+		$this->db->where('id_fir', $id);
+		$query = $this->db->update('form', $data);
+		return $query;
+		
+	}
 }
 

@@ -61,7 +61,7 @@
 				<a href="" class="btn btn-danger">Delete</a>
 			</td>
 		</tr>
-	<?php } ?>
+	<?php ?>
   </tbody>
 </table>
 </div>
