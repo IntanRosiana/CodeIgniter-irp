@@ -32,6 +32,7 @@
 	  	<th scope="col">Presentation</th>
 	  	<th scope="col">Result Insentif</th>
 	  	<th scope="col">Total Insentif</th>
+	  	<th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -55,6 +56,10 @@
       <td><?=$data->presentation;?></td>
       <td><?=$data->result_insentif;?></td>
       <td><?=$data->total_insentif;?></td>
+      <td>
+				<a href="<?=base_url('form/update?id='.$data->id_fir);?>" class="btn btn-success">Edit</a> | &nbsp;
+				<a href="" class="btn btn-danger">Delete</a>
+			</td>
 		</tr>
 	<?php } ?>
   </tbody>
